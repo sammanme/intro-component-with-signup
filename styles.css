@@ -122,3 +122,7 @@ small span {
   font-weight: 600;
   cursor: pointer;
 }
+
+label span {
+  color: red;
+}
