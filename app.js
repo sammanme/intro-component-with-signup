@@ -8,6 +8,7 @@ const firstNameError = document.getElementById('firstName_error');
 const lastNameError = document.getElementById('lastName_error');
 const emailError = document.getElementById('email_error');
 const passwordError = document.getElementById('password_error');
+const togglePassword = document.querySelector('.toggle-password');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -98,4 +99,12 @@ password.addEventListener('input', () => {
     password.classList.remove('error');
     passwordError.textContent = '';
   }
+});
+
+// Toggle password visibility
+togglePassword.addEventListener('click', () => {
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  togglePassword.querySelector('i').classList.toggle('fa-eye');
+  togglePassword.querySelector('i').classList.toggle('fa-eye-slash');
 });
