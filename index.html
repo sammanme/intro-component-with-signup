@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | Intro component with sign up form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
     <script src="./validation.js"></script>
@@ -33,30 +34,47 @@
         <h4>Try it free 7 days<span> then $20/mo. thereafter</span></h4>
         <form action="" id="form">
           <label for="firstName">
-            <input type="text" class="firstName" placeholder="First Name" />
-            <span id="firstName_error" class="firstName-error"></span>
+            <div class="name-container">
+              <input type="text" class="firstName" placeholder="First Name" />
+              <span class="error-icon" id="firstName_error_icon">
+                <i class="material-icons">error</i>
+              </span>
+            </div>
+            <span id="firstName_error" class="error-message"></span>
           </label>
           
           <label for="lastName">
-            <input type="text" class="lastName" placeholder="Last Name" />
-            <span id="lastName_error" class="firstName-error"></span>
+            <div class="name-container">
+              <input type="text" class="lastName" placeholder="Last Name" />
+              <span class="error-icon" id="lastName_error_icon">
+                <i class="material-icons">error</i>
+              </span>
+            </div>
+            <span id="lastName_error" class="error-message"></span>
           </label>
           <label for="email">
-            <input type="email" class="email" placeholder="Email" />
-            <span id="email_error" class="firstName-error"></span>
+            <div class="name-container">
+              <input type="email" class="email" placeholder="Email" />
+              <span class="error-icon" id="email_error_icon">
+                <i class="material-icons">error</i>
+              </span>
+            </div>
+            <span id="email_error" class="error-message"></span>
           </label>
           <div class="password-container">
             <input type="password" class="password" placeholder="Password" />
             <span class="toggle-password">
               <i class="fas fa-eye" aria-hidden="true"></i>
             </span>
+            <span class="error-icon" id="password_error_icon">
+              <i class="material-icons">error</i>
+            </span>
           </div>
           <span id="password_error" class="error-message"></span>
           <button id="button">Claim your free trial</button>
           <small
             >By clicking the button, you are agreeing to our
-            <span> Terms and Services</span></small
-          >
+            <span> Terms and Services</span></small>
         </form>
       </div>
     </main>

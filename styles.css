@@ -127,6 +127,14 @@ label span {
   color: red;
 }
 
+.name-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Added margin to ensure the error message is below the container */
+}
+
+
 .password-container {
   position: relative;
   display: flex;
@@ -147,14 +155,43 @@ label span {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-bottom: 1em;
 }
 
 .password-container .toggle-password .fa {
   font-size: 1.2em;
+  
 }
+
 
 .error-message {
   color: red;
   font-size: 0.875em;
-  margin-top: -10px; /* Adjust margin to align the error message correctly */
+  display: none; /* Initially hidden */
+  
+}
+
+input.error ~ .error-message {
+  display: inline; /* Show when error class is added */
+}
+
+.error-icon {
+  position: absolute;
+  right: 10px; /* Adjust this value as needed */
+  display: none; /* Initially hidden */
+  color: red;
+}
+
+input.error + .error-icon {
+  display: inline; /* Show when error class is added */
+  padding-bottom: 1em;
+}
+
+
+
+#password_error_icon {
+  position: absolute;
+  padding-bottom: 1.8em; /* Position this to the right outside the input field */
+  display: none; /* Initially hidden */
+  color: red;
 }
